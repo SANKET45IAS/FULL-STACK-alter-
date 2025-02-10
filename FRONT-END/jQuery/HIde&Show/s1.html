@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/FRONT-END/jQuery/jquery-3.7.1.js"></script>
+    <style>
+        #p {
+            background-color: aqua;
+        }
+        #b1 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        #Slide {
+            background-color: blueviolet;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="but">Switch</button>
+    <br><br>
+    <div id="p">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repellendus eligendi illum odit autem. Eaque debitis beatae ab autem vero repellendus inventore excepturi nam, sapiente consequuntur. Ipsam nobis aspernatur maxime.
+        </p>
+    </div>
+    <div id="b1"></div>
+    <br>
+    <div id="Slide">Slide Up & Down</div>   
+    <br>
+    <button id="b2">Slide</button>
+   <script>
+    $(document).ready(function(){
+        $('#b1').hover(function(){
+            $(this).fadeToggle(2000);
+        });
+
+        let mode = 1;
+        $('#p').hover(function(){
+            $(this).hide();
+        }, function(){
+            $(this).show();
+        });
+
+        $('#but').on({
+            click: function() {
+                if (mode == 1) {
+                    mode = 0;
+                    $('body').css("background", "black");
+                    $('#p').css("background", "white");
+                } else {
+                    mode = 1;
+                    $('body').css("background", "white");
+                    $('#p').css("background", "aqua");
+                }
+            },
+            mouseenter: function() {
+                $('#b1').css("background", "green");
+            },
+            mouseleave: function() {
+                $('#b1').css("background", "red");
+            }
+        });
+
+        let s = 1;
+        $('#b2').click(function(){
+            if (s == 1) {
+                s = 0;
+                $('#Slide').slideUp(2000);
+            } else {
+                s = 1;
+                $('#Slide').slideDown(2000, function() {
+                    $(this).animate({
+                        height: "200px",
+                        width: "200px"
+                    },1000);
+                });
+            }
+        });
+    });
+   </script>
+</body>
+</html>

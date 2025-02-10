@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(0, 38, 255, 0.291);
+}
+li{
+     font-style: normal;
+    font-size: 18.5px;/*1cm = 37px,1px = 0.02cm*/
+    font-family: "Libre Baskerville", serif;
+    font-weight:bolder;/* value(100),light,normal,bold */
+    list-style:lower-roman;/*Style to numbering the list item*/
+    line-height: 37px;/*Height between 2 Line */
+    font-variant: small-caps;
+}
+#p1{
+    background-color: rgba(246, 246, 34, 0.834);
+    color: black;
+}
+#p2{
+    background-color: rgba(0, 123, 255, 0.45);/*0.742 is the the alpha value which define the color transferancey */
+}
+#p3{
+    background-color: #5aff57e9;/*hexadecimal value*/
+}

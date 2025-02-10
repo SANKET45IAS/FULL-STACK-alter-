@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-3</title>
+    <style>
+        /* Initial styles */
+        body {
+            background: white;
+            color: black;
+        }
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="toggleButton">Toggle Background</button>
+
+    <!-- Include jQuery Library -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous">
+    </script>
+    
+    <!-- Include your custom script -->
+    <script>
+      $(document).ready(function() {
+        let mode = 0; // Initialize mode variable
+
+        $('#toggleButton').click(function() {
+          if (mode === 1) {
+            mode = 0;
+            $('body').css('background', 'white');    
+            $('h1').css('color', 'black');
+          } else {
+            mode = 1;
+            $('body').css('background', 'black');    
+            $('h1').css('color', 'white');
+          }
+        });
+      });
+    </script>
+</body>
+</html>

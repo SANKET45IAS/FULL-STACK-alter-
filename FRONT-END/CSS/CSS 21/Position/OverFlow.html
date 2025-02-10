@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverFlow</title>
+    <style>
+*{
+    box-sizing: border-box;
+}
+.auto{
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    overflow: auto;
+    margin-bottom: 50px;
+}
+.scroll{
+    border: 1px solid blue;
+    overflow:scroll;
+    margin-bottom: 50px;
+}
+.hidden{
+    border: 1px solid blue;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+    height: 100px;
+    width: 100px;
+}
+.xy-axis{
+    border: 1px solid blue;
+    white-space: nowrap;/*Text in One Line Lower Text become a White Space*/
+    /* overflow: hidden scroll; X hidden Y Scroll */
+    overflow: scroll hidden; /*X Scroll Y Hidden*/
+    margin-bottom: 50px;
+    height: 70px;
+    width: 100px;
+}
+    </style>
+</head>
+<body>
+    <div class="auto">Text with auto scroll will automatically adjust the Over flow if there was Overflow.And If Not OverFlow then the scroll bar not shown ( Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ullam animi est quos beatae dicta odit molestias distinctio error, perferendis aspernatur, eius tempora maxime eveniet ad explicabo odio adipisci eos temporibus magni numquam ab fugit quae? Qui quod eaque doloremque quam possimus placeat suscipit laborum incidunt quas vitae tempora est repellat laboriosam eos cum, consequuntur molestias veritatis porro dicta debitis neque asperiores numquam. Odit tenetur eaque quasi dolor in aperiam debitis nostrum ut qui soluta, porro vitae fugiat sunt minus animi, modi consequuntur suscipit, quibusdam repellat amet ullam quaerat earum non. Fugit aut maiores non autem eaque commodi cum voluptatum? )</div>
+    <div class="scroll">Text with OverFlow:scroll will always show the scroll bar if not needed also.( Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ullam animi est quos beatae dicta odit molestias distinctio error, perferendis aspernatur, eius tempora maxime eveniet ad explicabo odio adipisci eos temporibus magni numquam ab fugit quae? Qui quod eaque doloremque quam possimus placeat suscipit laborum incidunt quas vitae tempora est repellat laboriosam eos cum, consequuntur molestias veritatis porro dicta debitis neque asperiores numquam. Odit tenetur eaque quasi dolor in aperiam debitis nostrum ut qui soluta, porro vitae fugiat sunt minus animi, modi consequuntur suscipit, quibusdam repellat amet ullam quaerat earum non. Fugit aut maiores non autem eaque commodi cum voluptatum? )</div>
+    <div class="hidden">Text bar hidden Only from the x-axis( Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis adipisci corporis doloribus exercitationem eaque eveniet soluta. Dolores qui nostrum voluptas eaque debitis quaerat fugiat, sit impedit deserunt! Rem fugit delectus eum veritatis architecto. Fugiat laborum deleniti magni aspernatur dicta autem debitis enim, cumque vitae quasi ipsum molestias earum necessitatibus fugit ut obcaecati unde officiis adipisci incidunt nihil maxime voluptas ratione dolores ullam? Odit quae ipsum esse recusandae possimus ad reprehenderit provident laboriosam atque consequatur molestias eveniet temporibus, facilis veniam inventore tempora fugit perferendis distinctio culpa voluptatibus sapiente doloribus eligendi. Ducimus molestias delectus beatae facilis! Pariatur corporis est sunt laborum. )</div>
+    <div class="xy-axis">Text bar hidden and scroll( Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis adipisci corporis doloribus exercitationem eaque eveniet soluta. Dolores qui nostrum voluptas eaque debitis quaerat fugiat, sit impedit deserunt! Rem fugit delectus eum veritatis architecto. Fugiat laborum deleniti magni aspernatur dicta autem debitis enim, cumque vitae quasi ipsum molestias earum necessitatibus fugit ut obcaecati unde officiis adipisci incidunt nihil maxime voluptas ratione dolores ullam? Odit quae ipsum esse recusandae possimus ad reprehenderit provident laboriosam atque consequatur molestias eveniet temporibus, facilis veniam inventore tempora fugit perferendis distinctio culpa voluptatibus sapiente doloribus eligendi. Ducimus molestias delectus beatae facilis! Pariatur corporis est sunt laborum. )</div>
+</body>
+</html>

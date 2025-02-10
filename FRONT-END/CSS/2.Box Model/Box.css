@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    cursor: url("download.png");
+}
+h1{
+    background-color: rgba(0, 255, 255, 0.826);
+    width: 300px;
+    /* height: 200px; */
+    text-align:center;
+    border-style:solid;
+    border-width:4px;
+    border-color: rgb(239, 14, 14);
+    border-radius: 20px;
+}
+#p1{
+    background-color: rgba(70, 249, 15, 0.837);
+    border: solid blue 4px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    /* padding: 10px 30px 40px 60px; Another way :top right buttom left*/ 
+   /* padding: 90px 60px;3rd way :top-buttom left-right */
+    margin: 40px;
+}
+#p2{
+    font-style: italic;
+    border-top: solid red;
+    border-bottom: solid red;
+    border-left: solid blue;
+    background-color: rgba(165, 42, 42, 0.767);
+    border-width: 5px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+    margin-inline-end: 1em;
+}
+#in{
+    font-size: 30px;
+    text-align:right;
+    padding: 25px;
+}
+/* In Inline Tag height an width can't be applay/ Only use in block element*/
