@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript classList Example</h2>
+
+    <div id="box">Click buttons to modify class</div>
+
+    <br>
+
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <button onclick="checkClass()">Check Class</button>
+    <button onclick="replaceClass()">Replace Class</button>
+
+    <script>
+        let box = document.getElementById("box");
+
+        // Add a class
+        function addClass() {
+            box.classList.add("highlight");
+        }
+
+        // Remove a class
+        function removeClass() {
+            box.classList.remove("highlight");
+        }
+
+        // Toggle a class (Add if not present, Remove if present)
+        function toggleClass() {
+            box.classList.toggle("highlight");
+        }
+
+        // Check if a class exists
+        function checkClass() {
+            alert(box.classList.contains("highlight") ? "Class exists!" : "Class does not exist.");
+        }
+
+        // Replace an existing class with a new one
+        function replaceClass() {
+            box.classList.replace("highlight", "newClass");
+        }
+    </script>
+
+</body>
+</html>
+<!-- 📌 classList in JavaScript
+classList is a built-in JavaScript property that allows you to add, remove, toggle, and check CSS classes on an HTML element dynamically.
+
+🚀 Why Use classList?
+✅ Makes it easy to modify CSS classes dynamically.
+✅ Avoids overwriting existing classes (unlike element.className).
+✅ Supports multiple class operations efficiently. -->

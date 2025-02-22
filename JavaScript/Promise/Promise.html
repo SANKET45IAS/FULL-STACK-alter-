@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">Start</h1>
+    <h1 id="head2">Processing</h1>
+    <h1 id="head3">End</h1>
+    <script>
+    let head2 = document.getElementById("head2");
+    let P1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            head2.innerText = "Jay Jagannath";
+            reject("No"); // Resolve the promise
+        }, 3000);
+    });
+
+    P1.then((message) => {
+        console.log("Promise Resolved:", message);
+        return "Not execute";
+    }).catch((error) => {
+        console.log("Promise Rejected:", error);
+    });
+
+    console.log(P1.message); // Logs the pending promise
+    </script>
+</body>
+</html>
+ 

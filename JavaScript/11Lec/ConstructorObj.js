@@ -1,0 +1,1 @@
+let ConstObj=new Object();

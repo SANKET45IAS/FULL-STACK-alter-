@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners Example</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Listeners Example</h1>
+
+    <!-- Click Event -->
+    <button id="clickButton">Click Me!</button>
+    <p id="clickMessage"></p>
+
+    <!-- Mouseover and Mouseout Events -->
+    <div id="box"></div>
+    <p id="mouseMessage"></p>
+
+    <!-- Keydown and Keyup Events -->
+    <input type="text" id="textInput" placeholder="Type something...">
+    <p id="keyMessage"></p>
+
+    <!-- Change Event -->
+    <select id="dropdown">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <p id="changeMessage"></p>
+
+    <!-- Submit Event -->
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="submitMessage"></p>
+
+    <!-- Load Event -->
+    <p id="loadMessage"></p>
+
+    <script>
+        // Click Event Listener
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('clickMessage').textContent = 'Button was clicked!';
+        });
+
+        // Mouseover and Mouseout Event Listeners
+        const box = document.getElementById('box');
+        box.addEventListener('mouseover', function() {
+            document.getElementById('mouseMessage').textContent = 'Mouse is over the box!';
+            box.style.backgroundColor = 'lightcoral';
+        });
+        box.addEventListener('mouseout', function() {
+            document.getElementById('mouseMessage').textContent = 'Mouse is out of the box!';
+            box.style.backgroundColor = 'lightblue';
+        });
+
+        // Keydown and Keyup Event Listeners
+        const textInput = document.getElementById('textInput');
+        textInput.addEventListener('keydown', function() {
+            document.getElementById('keyMessage').textContent = 'Key is pressed down...';
+        });
+        textInput.addEventListener('keyup', function() {
+            document.getElementById('keyMessage').textContent = 'Key is released!';
+        });
+
+        // Change Event Listener
+        document.getElementById('dropdown').addEventListener('change', function() {
+            const selectedValue = this.value;
+            document.getElementById('changeMessage').textContent = `Selected option: ${selectedValue}`;
+        });
+
+        // Submit Event Listener
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById('name').value;
+            document.getElementById('submitMessage').textContent = `Form submitted with name: ${name}`;
+        });
+
+        // Load Event Listener
+        window.addEventListener('load', function() {
+            document.getElementById('loadMessage').textContent = 'Page has fully loaded!';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Code1....
+
+        // let startTime1 = performance.now();
+        // for (let i = 1; i < 100; i++) { // Declared 'i' properly
+        //     let paragraphs = document.createElement("p");
+        //     paragraphs.innerText = "Para " + i;
+        //     document.body.insertAdjacentElement("beforeend", paragraphs);
+        // }        
+        // let endTime1 = performance.now();
+        // console.log("Execution Time:", (endTime1 - startTime1), "ms");
+
+
+        // // Code2....
+        // let startTime2 = performance.now();
+        // let myDiv=document.createElement("div");
+        // for (let i = 1; i < 100; i++) { // Declared 'i' properly
+        //     let paragraphs = document.createElement("p");
+        //     paragraphs.innerText = "Para " + i;
+        //     myDiv.insertAdjacentElement("beforeend", paragraphs);
+        // }
+        // document.body.appendChild(myDiv);
+        // let endTime2 = performance.now();
+        // console.log("Execution Time:", (endTime2 - startTime2), "ms");
+
+
+        //Best Code....
+
+        let startTime3 = performance.now();
+        let FragmentDoc=document.createDocumentFragment();
+        for (let i = 1; i < 100; i++) { // Declared 'i' properly
+            let paragraphs = document.createElement("p");
+            paragraphs.innerText = "Para " + i;
+            FragmentDoc.appendChild(paragraphs);
+        }
+        document.body.appendChild(FragmentDoc);
+        let endTime3 = performance.now();
+        console.log("Execution Time:", (endTime3 - startTime3), "ms");
+    </script>
+</body>
+</html>
