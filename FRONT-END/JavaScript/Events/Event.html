@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">SANKET</h1>
+    <input type="text" id="txt" placeholder="Enter Text..">
+    <button id="b1">Click For Change Text</button>
+    <button id="b2">Remove Event Listener</button>
+
+    <script>
+        let h1 = document.getElementById("head1");
+        let OgTxt=h1.innerText;
+        let txtInput = document.getElementById("txt");
+        let btn1 = document.getElementById("b1");
+        let btn2 = document.getElementById("b2");
+
+        function chT(event) {  // Declare function normally
+            h1.innerText = txtInput.value;
+            console.log(event.type);
+            // OutputWeb           
+        }
+
+        // Add event listener
+        btn1.addEventListener("click", chT);
+
+        // Remove event listener
+        btn2.addEventListener("click", function() {
+            btn1.removeEventListener("click", chT);
+            h1.innerText=OgTxt;
+            alert("Event listener removed!");
+        });
+    </script>
+</body>
+</html>

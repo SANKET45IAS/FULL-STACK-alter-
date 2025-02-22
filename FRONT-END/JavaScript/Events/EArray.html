@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="EArray">
+        <p id="p1">Para 1 <span>span 1 </span></p>
+        <p id="p2">Para 2 <span>span 2 </span></p>
+        <p id="p3">Para 3 <span>span 3 </span></p>
+        <p id="p4">Para 4 <span>span 4 </span></p>
+    </div>
+
+    <script>
+    let OnPara=function(event) {
+       if (event.target.nodeName=="SPAN") { //element name always in upperCase
+        alert("Click on Para: " +event.target.textContent);
+       } 
+    }
+//         let paragraphs = document.querySelectorAll("p");
+// for (let i = 0; i < paragraphs.length; i++) {
+//     paragraphs[i].addEventListener("click",OnPara);
+// }
+
+let Ediv=document.querySelector("div");
+Ediv.addEventListener("click",OnPara)
+    </script>
+</body>
+</html>

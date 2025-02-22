@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript CSS Property Manipulation</title>
+    <style>
+        /* Default styling for the box */
+        #box {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* A class to toggle styles */
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript CSS Property Manipulation</h2>
+
+    <!-- Div element to apply CSS changes -->
+    <div id="box">This is a sample box</div>
+    
+    <br>
+
+    <!-- Buttons to change CSS dynamically -->
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+    <button onclick="increaseFontSize()">Increase Font Size</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <button onclick="resetStyles()">Reset Styles</button>
+
+    <script>
+        // Function to change the background color
+        function changeBackground() {
+            document.getElementById("box").style.backgroundColor = "lightblue";
+        }
+
+        // Function to change the text color
+        function changeTextColor() {
+            document.getElementById("box").style.color = "green";
+        }
+
+        // Function to increase the font size
+        function increaseFontSize() {
+            let box = document.getElementById("box");
+            let currentSize = window.getComputedStyle(box).fontSize; // Get current font size
+            let newSize = parseInt(currentSize) + 2 + "px"; // Increase size by 2px
+            box.style.fontSize = newSize;
+        }
+
+        // Function to toggle a CSS class
+        function toggleClass() {
+            document.getElementById("box").classList.toggle("highlight");
+        }
+
+        // Function to reset styles to default
+        function resetStyles() {
+            let box = document.getElementById("box");
+            box.style.backgroundColor = ""; // Reset to default
+            box.style.color = "";
+            box.style.fontSize = "";
+            box.classList.remove("highlight"); // Remove the class if applied
+        }
+    </script>
+
+</body>
+</html>
