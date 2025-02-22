@@ -1,9 +1,0 @@
-The logEvent function is a simple helper function that is used to log the details of each event when it is triggered.
-It appends a new log message to the #log div, so that you can see a record of what event occurred and when it happened.
-
-Purpose:
-The logEvent function is called whenever an event occurs (like clicking a button or pressing a key), 
-and it helps you visually track what event has happened. You can see each event message being added to the log at the bottom of the page.
-
-For example, if you click the button with the text "Click Me", the event handler triggers logEvent("Button clicked! (click)"), 
-and it displays that message in the log section.
